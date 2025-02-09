@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffdde1;
+        }
+        .container {
+            margin-top: 15%;
+        }
+        h1 {
+            color: #ff4d6d;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+        #message {
+            font-size: 24px;
+            color: #ff4d6d;
+            font-weight: bold;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do You Love Me?</h1>
+        <button id="yesBtn" class="btn" onclick="showMessage()">Yes</button>
+        <button id="noBtn" class="btn" onmouseover="moveNoButton()">No</button>
+        <p id="message">Yay! I love you too! ❤️</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        function moveNoButton() {
+            const noBtn = document.getElementById("noBtn");
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
